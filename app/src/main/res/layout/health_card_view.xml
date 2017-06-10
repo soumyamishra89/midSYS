@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardview:cardElevation="4dp"
+    cardview:cardPreventCornerOverlap="false"
+    cardview:cardUseCompatPadding="true"
+    android:id="@+id/cardview"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/card_foreground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:id="@+id/challenge_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:layout_alignParentLeft="true"
+            android:gravity="center|left"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/challenge_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <View style="@style/Divider"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/challengers_detail_heading"
+            android:clickable="false">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/challengers_detail_list"
+            android:clickable="false">
+        </LinearLayout>
+
+        <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/challenge_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"/>
+
+        <!--<ImageView
+            android:id="@+id/share_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share_fb_blue_18dp"
+            android:gravity="right"
+            android:layout_weight="1"/>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

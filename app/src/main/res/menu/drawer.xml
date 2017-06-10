@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/drawer_health"
             android:checked="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_health"
             android:title="@string/health"/>
-
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_forum"
             android:checked="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_forum"
             android:title="@string/forum"/>
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/drawer_tutorial"
             android:checked="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_tutorial"
             android:title="@string/tutorial"/>
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/drawer_videos"
             android:checked="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_video"
             android:title="@string/videos"/>
 
+    </group>
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_midwives"
             android:checked="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_midwives"
             android:title="@string/midwives"/>
 
     </group>

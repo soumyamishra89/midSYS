@@ -26,4 +26,37 @@
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="nav_drawer_width">260dp</dimen>
+
+    <dimen name="timeline_icon_size">32dp</dimen>
+
+    <dimen name="elevation_map_items">8dp</dimen>
+
+    <dimen name="main_screen_icon_size">30dp</dimen>
+    <dimen name="elevation_main_category">4dp</dimen>
+    <dimen name="elevation_sub_category">2dp</dimen>
+    <dimen name="elevation_main_icon">8dp</dimen>
+
+    <dimen name="category_margin">16dp</dimen>
+    <dimen name="category_margin_half">8dp</dimen>
+    <dimen name="category_height">80dp</dimen>
+    <dimen name="category_title_size">10sp</dimen>
+    <dimen name="category_number_size">40sp</dimen>
+    <dimen name="category_title_margin">4dp</dimen>
+    <dimen name="category_title_width">50dp</dimen>
+    <dimen name="category_title_padding">2dp</dimen>
+    <dimen name="category_title_padding_half">1dp</dimen>
+    <dimen name="category_icon_size_big">30dp</dimen>
+    <dimen name="category_icon_size_medium">25dp</dimen>
+    <dimen name="category_icon_size_small">20dp</dimen>
+    <dimen name="category_text_details">16sp</dimen>
+    <dimen name="category_text_details_s">12dp</dimen>
+
+    <dimen name="timeline_icon_size_s">20dp</dimen>
+    <dimen name="timeline_margin_vertical">8dp</dimen>
+
+    <dimen name="fragment_details_height">450dp</dimen>
+    <dimen name="fragment_activity_height">300dp</dimen>
+    <dimen name="details_title_size">14sp</dimen>
+    <dimen name="details_value_text_size">36sp</dimen>
+    <dimen name="details_value_text_size_small">18sp</dimen>
 </resources>

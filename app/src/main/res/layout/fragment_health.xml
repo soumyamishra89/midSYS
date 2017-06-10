@@ -1,19 +1,585 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/fragment_details_height">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
 
-    <ImageView
-        android:id="@+id/health_image"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/category_margin"
+        android:animateLayoutChanges="true">
 
 
-</android.support.constraint.ConstraintLayout>
+
+        <!--<HorizontalScrollView
+            android:id="@+id/layoutTimeLineContainer"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_ripple_blue"
+            android:elevation="@dimen/elevation_main_category"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/layoutTimeLine"
+                android:layout_width="2000dp"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>-->
+
+        <!-- <TextView
+             android:id="@+id/txvCategoryTimeLine"
+             android:layout_width="@dimen/category_title_width"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/category_title_margin"
+             android:layout_marginTop="@dimen/category_title_margin"
+             android:background="@color/transparentBlueGrey"
+             android:elevation="@dimen/elevation_main_category"
+             android:gravity="center"
+             android:paddingBottom="@dimen/category_title_padding_half"
+             android:paddingLeft="@dimen/category_title_padding"
+             android:paddingRight="@dimen/category_title_padding"
+             android:paddingTop="@dimen/category_title_padding_half"
+             android:text="Timeline"
+             android:textColor="@color/transparent"
+             android:textSize="@dimen/category_title_size"
+             android:textStyle="bold"
+             app:layout_constraintLeft_toLeftOf="@id/layoutTimeLineContainer"
+             app:layout_constraintTop_toTopOf="@id/layoutTimeLineContainer" />
+
+         <TextView
+             android:elevation="@dimen/elevation_main_category"
+             android:id="@+id/txvTimelineDate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="@dimen/category_title_margin"
+             android:layout_marginTop="@dimen/category_title_margin"
+             android:textColor="@color/transparentBlueGrey"
+             android:textSize="@dimen/category_title_size"
+             android:textStyle="bold"
+             app:layout_constraintBaseline_toBaselineOf="@id/txvCategoryTimeLine"
+             app:layout_constraintRight_toRightOf="@id/layoutTimeLineContainer"
+             app:layout_constraintTop_toTopOf="@id/layoutTimeLineContainer" />-->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutWeather"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_ripple_blue"
+            android:elevation="@dimen/elevation_main_category">
+
+
+            <ImageView
+                android:id="@+id/imgvMainWeather"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txvMainDate"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:elevation="@dimen/elevation_main_icon"
+                android:padding="3dp"
+                android:src="@drawable/ic_sunny"/>
+
+            <TextView
+                android:id="@+id/txvMainDate"
+                app:layout_constraintLeft_toRightOf="@+id/imgvMainWeather"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgvMainWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Saturday, 13/05/2017"
+                android:textColor="@color/transparentBlue"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/txvMainWeather"
+                app:layout_constraintBottom_toBottomOf="@+id/imgvMainWeather"
+                app:layout_constraintLeft_toLeftOf="@+id/txvMainDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Sunny  /  20°C  /  75%"
+                android:textColor="@color/transparentBlue"
+                android:textSize="@dimen/category_text_details"
+                android:textStyle="italic"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="25dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutLocations"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/layoutWeather"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/category_margin_half"
+            android:layout_marginRight="@dimen/category_margin_half"
+            android:background="@drawable/bg_ripple_red"
+            android:elevation="@dimen/elevation_main_category"
+            >
+
+            <TextView
+                android:id="@+id/txvCategoryLocations"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:layout_marginTop="@dimen/category_title_margin"
+                android:background="@color/transparentRed"
+                android:elevation="@dimen/elevation_main_category"
+                android:gravity="center"
+                android:paddingBottom="@dimen/category_title_padding_half"
+                android:paddingLeft="@dimen/category_title_padding"
+                android:paddingRight="@dimen/category_title_padding"
+                android:paddingTop="@dimen/category_title_padding_half"
+                android:text="Blood Pressure"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/category_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txvNumLocations"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryLocations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="@dimen/category_margin_half"
+                android:fontFamily="sans-serif-thin"
+                android:text="3"
+                android:textColor="@color/transparentRed"
+                android:textSize="40sp"/>
+
+
+            <ImageView
+                android:id="@+id/imgvLocationIcon"
+                app:layout_constraintBottom_toBottomOf="@+id/txvNumLocations"
+                app:layout_constraintLeft_toRightOf="@+id/txvNumLocations"
+                app:layout_constraintTop_toTopOf="@+id/txvNumLocations"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_location"/>
+
+            <TextView
+                android:id="@+id/txvDetailsLocation"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvNumLocations"
+                app:layout_constraintLeft_toRightOf="@+id/imgvLocationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="in Berlin"
+                android:textColor="@color/transparentMainText"
+                android:textStyle="italic"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutSteps"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutLocations"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layoutLocations"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/category_margin"
+            android:layout_marginLeft="@dimen/category_margin_half"
+            android:layout_marginRight="@dimen/category_margin"
+            android:layout_marginStart="@dimen/category_margin_half"
+            android:background="@drawable/bg_ripple_orange"
+            android:elevation="@dimen/elevation_main_category"
+            >
+
+            <TextView
+                android:id="@+id/txvCategorySteps"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:layout_marginTop="@dimen/category_title_margin"
+                android:background="@color/transparentOrange"
+                android:elevation="@dimen/elevation_main_category"
+                android:gravity="center"
+                android:paddingBottom="@dimen/category_title_padding_half"
+                android:paddingLeft="@dimen/category_title_padding"
+                android:paddingRight="@dimen/category_title_padding"
+                android:paddingTop="@dimen/category_title_padding_half"
+                android:text="Sleep Duration"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/category_title_size"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgvGoal"
+                app:layout_constraintBottom_toBottomOf="@+id/txvCategorySteps"
+                app:layout_constraintLeft_toRightOf="@+id/txvCategorySteps"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txvCategorySteps"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/category_margin_half"
+                android:layout_marginRight="@dimen/category_margin_half"
+                android:src="@drawable/ic_trophy"/>
+
+            <TextView
+                android:id="@+id/txvStepNumber"
+                app:layout_constraintLeft_toLeftOf="@+id/txvCategorySteps"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategorySteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/category_margin_half"
+                android:fontFamily="sans-serif-light"
+                android:text="2450"
+                android:textColor="@color/transparentOrange"
+                android:textSize="18sp"/>
+
+            <TextView
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvStepNumber"
+                app:layout_constraintLeft_toRightOf="@+id/txvStepNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:fontFamily="sans-serif-light"
+                android:text="steps so far today"
+                android:textColor="@color/transparentMainText"
+                android:textSize="@dimen/category_text_details_s"
+                android:textStyle="italic"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutMusic"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/layoutLocations"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/category_margin_half"
+            android:layout_marginRight="@dimen/category_margin_half"
+            android:layout_marginTop="@dimen/category_margin"
+            android:background="@drawable/bg_ripple_yellow"
+            android:elevation="@dimen/elevation_main_category"
+            >
+
+            <TextView
+                android:id="@+id/txvCategoryMusic"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:layout_marginTop="@dimen/category_title_margin"
+                android:background="@color/transparentYellow"
+                android:elevation="@dimen/elevation_main_category"
+                android:gravity="center"
+                android:paddingBottom="@dimen/category_title_padding_half"
+                android:paddingLeft="@dimen/category_title_padding"
+                android:paddingRight="@dimen/category_title_padding"
+                android:paddingTop="@dimen/category_title_padding_half"
+                android:text="Heart Rate"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/category_title_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txvSongNumber"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_margin"
+                android:layout_marginStart="@dimen/category_margin"
+                android:fontFamily="sans-serif-light"
+                android:text="19"
+                android:textColor="@color/transparentYellow"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/txvListenTime"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="1h15m"
+                android:textColor="@color/transparentYellow"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/txvSongDetail"
+                app:layout_constraintLeft_toLeftOf="@+id/txvSongNumber"
+                app:layout_constraintRight_toRightOf="@+id/txvSongNumber"
+                app:layout_constraintTop_toBottomOf="@+id/txvSongNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="songs"
+                android:textColor="@color/transparentMainText"
+                android:textSize="@dimen/category_text_details_s"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txvListenDetail"
+                app:layout_constraintLeft_toLeftOf="@+id/txvListenTime"
+                app:layout_constraintRight_toRightOf="@+id/txvListenTime"
+                app:layout_constraintTop_toBottomOf="@+id/txvListenTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="listening"
+                android:textColor="@color/transparentMainText"
+                android:textSize="@dimen/category_text_details_s"
+                android:textStyle="italic"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutAppUsage"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutMusic"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layoutMusic"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/category_margin"
+            android:layout_marginLeft="@dimen/category_margin_half"
+            android:layout_marginRight="@dimen/category_margin"
+            android:layout_marginStart="@dimen/category_margin_half"
+            android:background="@drawable/bg_ripple_cyan"
+            android:elevation="@dimen/elevation_main_category"
+            >
+
+            <TextView
+                android:id="@+id/txvCategoryUsage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:layout_marginTop="@dimen/category_title_margin"
+                android:background="@color/transparentCyan"
+                android:elevation="@dimen/elevation_main_category"
+                android:gravity="center"
+                android:paddingBottom="@dimen/category_title_padding_half"
+                android:paddingLeft="@dimen/category_title_padding"
+                android:paddingRight="@dimen/category_title_padding"
+                android:paddingTop="@dimen/category_title_padding_half"
+                android:text="Protein Level"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/category_title_size"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgvPhoneUsage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txvUsageDetail"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryUsage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_usage"/>
+
+            <TextView
+                android:id="@+id/txvUsageDetail"
+                app:layout_constraintLeft_toRightOf="@+id/imgvPhoneUsage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/category_margin_half"
+                android:fontFamily="sans-serif-light"
+                android:text="Today used phone for"
+                android:textColor="@color/transparentMainText"
+                android:textSize="@dimen/category_text_details_s"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/txvUsageTime"
+                app:layout_constraintLeft_toLeftOf="@+id/txvUsageDetail"
+                app:layout_constraintTop_toBottomOf="@+id/txvUsageDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="3h20m"
+                android:textColor="@color/transparentCyan"
+                android:textSize="18sp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutInternetData"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/layoutMusic"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/category_margin_half"
+            android:layout_marginRight="@dimen/category_margin_half"
+            android:layout_marginTop="@dimen/category_margin"
+            android:background="@drawable/bg_ripple_purple"
+            android:elevation="@dimen/elevation_main_category"
+           >
+
+            <TextView
+                android:id="@+id/txvCategoryData"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/category_title_margin"
+                android:layout_marginStart="@dimen/category_title_margin"
+                android:layout_marginTop="@dimen/category_title_margin"
+                android:background="@color/transparentPurple"
+                android:elevation="@dimen/elevation_main_category"
+                android:gravity="center"
+                android:paddingBottom="@dimen/category_title_padding_half"
+                android:paddingLeft="@dimen/category_title_padding"
+                android:paddingRight="@dimen/category_title_padding"
+                android:paddingTop="@dimen/category_title_padding_half"
+                android:text="Data"
+                android:textColor="@color/transparent"
+                android:textSize="@dimen/category_title_size"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imgvPieChart"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txvDataUsed"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryData"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_pie"/>
+
+            <TextView
+                android:id="@+id/txvDataUsed"
+                app:layout_constraintLeft_toRightOf="@+id/imgvPieChart"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvCategoryData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/category_margin_half"
+                android:fontFamily="sans-serif-light"
+                android:text="1590MB/2GB"
+                android:textColor="@color/transparentPurple"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txvDataDetail"
+                app:layout_constraintBottom_toBottomOf="@+id/imgvPieChart"
+                app:layout_constraintLeft_toLeftOf="@+id/txvDataUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="data used this month"
+                android:textColor="@color/transparentMainText"
+                android:textSize="@dimen/category_text_details_s"
+                android:textStyle="italic"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutArrow"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutLocations"
+            app:layout_constraintRight_toRightOf="@+id/layoutLocations"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInternetData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgvDownArrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:elevation="@dimen/elevation_main_category"
+                android:src="@drawable/ic_down_arrow"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutFragmentMain"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
+            app:layout_constraintRight_toRightOf="@+id/layoutWeather"
+            app:layout_constraintTop_toBottomOf="@+id/layoutArrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparentColorPrimary"
+            android:elevation="@dimen/elevation_sub_category"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/layoutFrameFragment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/category_title_margin"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!--This layout is just for creating margin at bottom-->
+        <FrameLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInternetData"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="@dimen/category_margin_half"></FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

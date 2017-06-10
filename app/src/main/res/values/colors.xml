@@ -20,5 +20,22 @@
     <color name="grey">#616060</color>
     <color name="charcoal">#504f4f</color>
     <color name="button_selectorcolor">#9E9E9E</color>
+    <color name="transparentBlue">#B02196F3</color>
+    <color name="transparentRed">#B0F44336</color>
+    <color name="transparentOrange">#B0FF9800</color>
+    <color name="transparentYellow">#B0FDD835</color>
+    <color name="transparentGreen">#B04CAF50</color>
+    <color name="transparentPurple">#B0673AB7</color>
+    <color name="transparentTeal">#B0009688</color>
+    <color name="transparentCyan">#B000BCD4</color>
+    <color name="transparentBrown">#B0795548</color>
+    <color name="transparentGrey">#B09E9E9E</color>
+    <color name="transparentProgressBar">#209E9E9E</color>
+    <color name="transparent">#b0ffffff</color>
+    <color name="transparentMainText">#B037474F</color>
+    <color name="transparentComplete">#00ffffff</color>
+    <color name="transparentBlueGrey">#607D8B</color>
+    <color name="transparentWhite">#B00D47A1</color>
+    <color name="transparentColorPrimary">#D0ffffff</color>
 
 </resources>

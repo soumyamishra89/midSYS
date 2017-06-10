@@ -14,4 +14,11 @@
     <color name="endstart">#0055ff</color>
     <color name="greyish">#fff2f1f2</color>
 
+    <color name="background_color">#009688</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#616060</color>
+    <color name="charcoal">#504f4f</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+
 </resources>

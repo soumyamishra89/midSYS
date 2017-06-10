@@ -62,7 +62,6 @@ public class FragmentHealth extends Fragment implements View.OnClickListener {
         viewMap.put(R.id.layoutAppUsage, R.id.layoutInternetData);
 
         //Populate fragmentMap
-        // #TODO implementer of each section fragment need to add an entry to this map
         fragmentMap.put(R.id.layoutLocations, FragmentHealthDetails.class.getName());
         fragmentMap.put(R.id.layoutSteps, FragmentHealthDetails.class.getName());
         fragmentMap.put(R.id.layoutAppUsage, FragmentHealthDetails.class.getName());

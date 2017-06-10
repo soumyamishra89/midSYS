@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#036303</color>
+    <color name="colorPrimaryDark">#004300</color>
+    <color name="appHeaderColor">#026302</color>
     <color name="colorAccent">#fcfcfc</color>
     <color name="colorMainBackground">#555</color>
     <color name="colorNativeSpeaker">#D32F2F</color>

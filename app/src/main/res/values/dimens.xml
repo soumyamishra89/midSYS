@@ -1,0 +1,29 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="search_view_margin_top">10dp</dimen>
+    <dimen name="search_view_margin">12dp</dimen>
+    <dimen name="divider_padding">12dp</dimen>
+    <dimen name="divider_layout_marginTop">10dp</dimen>
+    <dimen name="divider_layout_marginBottom">10dp</dimen>
+    <dimen name="textdivider_padding">10dp</dimen>
+    <!--Tab Properties -->
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="target_space">15dp</dimen>
+    <dimen name="target_width">65dp</dimen>
+    <dimen name="target_height">18dp</dimen>
+    <dimen name="droplayout_height">22dp</dimen>
+    <dimen name="normal_padding_btw_content">10dp</dimen>
+    <dimen name="challenge_height">55dp</dimen>
+    <dimen name="suggestion_height">110dp</dimen>
+    <dimen name="star_layout_margin">30dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_drawer_width">260dp</dimen>
+</resources>

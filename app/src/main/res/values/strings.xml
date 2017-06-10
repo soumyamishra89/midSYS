@@ -3,4 +3,23 @@
     <string name="country_default">Not Available</string>
     <string name="language_default">German</string>
     <string name="register_text">Register</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/health</item>
+        <item>@string/forum</item>
+        <item>@string/tutorial</item>
+        <item>@string/videos</item>
+        <item>@string/midwives</item>
+    </string-array>
+
+    <string name="health">Health</string>
+    <string name="forum">Forum</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="videos">Videos</string>
+    <string name="midwives">MidWives</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
 </resources>

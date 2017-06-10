@@ -22,4 +22,32 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
+    <string name="fullName">Full Name</string>
+    <string name="Age">Age</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="pp">Previous Pregnancy</string>
+    <string name="email">Email Id</string>
+    <string name="nop">Number of Pregnancy</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="next">Next</string>
+    <string name="registration">Registration</string>
+    <string name="location">Location</string>
+    <string name="passowrd">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="personality">This is a personality test, it will help you understand why you act the way that you do and how your
+personality is structured</string>
+
+    <string name="rate">1=disagree, 2=slightly disagree, 3=neutral, 4=slightly agree and 5=agree</string>
+
+    <string name="ques1">Get stressed out easily</string>
+    <string name="ques2">Take time out for others</string>
+    <string name="ques3">Am relaxed most of the time</string>
+    <string name="ques4">Have a soft heart</string>
+    <string name="ques5">Am quick to understand things</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -19,6 +19,7 @@ import android.view.View;
 
 import digitalhealth.de.midsys.fragment.FragmentForum;
 import digitalhealth.de.midsys.fragment.FragmentHealth;
+import digitalhealth.de.midsys.fragment.FragmentMidwives;
 import digitalhealth.de.midsys.fragment.FragmentTutorial;
 
 public class MainActivity extends AppCompatActivity {
@@ -132,10 +133,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.drawer_videos:
 
+                    Fragment fragment4 = Fragment.instantiate(MainActivity.this, FragmentTutorial.class.getName());
+                    fragmentTransaction.replace(R.id.fragmentmain, fragment4);
+                    fragmentTransaction.commit();
 
                     break;
                 case R.id.drawer_midwives:
-
+                    Fragment fragment5 = Fragment.instantiate(MainActivity.this, FragmentMidwives.class.getName());
+                    fragmentTransaction.replace(R.id.fragmentmain, fragment5);
+                    fragmentTransaction.commit();
 
                     break;
                 default:

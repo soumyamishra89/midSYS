@@ -47,7 +47,14 @@ personality is structured</string>
     <string name="ques4">Have a soft heart</string>
     <string name="ques5">Am quick to understand things</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="midSYSToken">misdsysToken</string>
+    <string name="midSYSMsg">message</string>
+    <string name="other_message">Hi</string>
+    <string name="mine_message">Hello I have a problem</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="single_view">Single View</string>
 </resources>

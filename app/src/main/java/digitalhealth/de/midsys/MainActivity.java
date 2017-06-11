@@ -16,8 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
+import digitalhealth.de.midsys.fragment.FragmentForum2;
 import digitalhealth.de.midsys.fragment.FragmentHealth;
 import digitalhealth.de.midsys.fragment.FragmentTutorial;
 
@@ -115,28 +115,31 @@ public class MainActivity extends AppCompatActivity {
                     Fragment fragment1 = Fragment.instantiate(MainActivity.this, FragmentHealth.class.getName());
                     fragmentTransaction.replace(R.id.fragmentmain, fragment1);
                     fragmentTransaction.commit();
-                    Toast.makeText(thisContext, "Home", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.drawer_forum:
                     Log.i(TAG, "FORUM");
+                    Fragment fragment2 = Fragment.instantiate(MainActivity.this, FragmentForum2.class.getName());
+                    fragmentTransaction.replace(R.id.fragmentmain, fragment2);
+                    fragmentTransaction.commit();
                     break;
                 case R.id.drawer_tutorial:
                     Log.i(TAG, "TUTORIAL");
                     Fragment fragment3 = Fragment.instantiate(MainActivity.this, FragmentTutorial.class.getName());
                     fragmentTransaction.replace(R.id.fragmentmain, fragment3);
                     fragmentTransaction.commit();
-                    Toast.makeText(thisContext, "Export success", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.drawer_videos:
-                    Toast.makeText(thisContext, "Logout", Toast.LENGTH_SHORT).show();
+
 
                     break;
                 case R.id.drawer_midwives:
-                    Toast.makeText(thisContext, "Logout", Toast.LENGTH_SHORT).show();
+
 
                     break;
                 default:
-                    Toast.makeText(thisContext, "Invalid Menu", Toast.LENGTH_SHORT).show();
+
                     break;
             }
             return false;

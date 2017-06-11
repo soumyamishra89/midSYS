@@ -17,6 +17,34 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radiogrp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MidWife"
+            android:layout_weight="1"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pregnant Woman"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+           />
+    </RadioGroup>
+
+
     <EditText
         android:id="@+id/fullName"
         android:layout_width="fill_parent"

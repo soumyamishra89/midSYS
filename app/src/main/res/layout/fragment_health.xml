@@ -143,7 +143,7 @@
             android:orientation="vertical"/>
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutLocations"
+            android:id="@+id/layoutBP"
             app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
             app:layout_constraintRight_toLeftOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/layoutWeather"
@@ -182,32 +182,30 @@
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoryLocations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="40dp"
                 android:layout_marginTop="@dimen/category_margin_half"
                 android:fontFamily="sans-serif-thin"
-                android:text="3"
+                android:text="120/80 mmHg"
                 android:textColor="@color/transparentRed"
-                android:textSize="40sp"/>
+                android:textSize="18sp"/>
 
 
-            <ImageView
+           <!-- <ImageView
                 android:id="@+id/imgvLocationIcon"
                 app:layout_constraintBottom_toBottomOf="@+id/txvNumLocations"
                 app:layout_constraintLeft_toRightOf="@+id/txvNumLocations"
                 app:layout_constraintTop_toTopOf="@+id/txvNumLocations"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_location"/>
+                android:src="@drawable/ic_location"/>-->
 
             <TextView
                 android:id="@+id/txvDetailsLocation"
-                app:layout_constraintBaseline_toBaselineOf="@+id/txvNumLocations"
-                app:layout_constraintLeft_toRightOf="@+id/imgvLocationIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvNumLocations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="in Berlin"
+                android:text="updated at 10:20 AM"
                 android:textColor="@color/transparentMainText"
                 android:textStyle="italic"/>
 
@@ -215,11 +213,11 @@
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutSteps"
-            app:layout_constraintBottom_toBottomOf="@+id/layoutLocations"
+            android:id="@+id/layoutSleep"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutBP"
             app:layout_constraintLeft_toLeftOf="@+id/guideline"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/layoutLocations"
+            app:layout_constraintTop_toTopOf="@+id/layoutBP"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginEnd="@dimen/category_margin"
@@ -251,7 +249,7 @@
                 android:textSize="@dimen/category_title_size"
                 android:textStyle="bold"/>
 
-            <ImageView
+           <!-- <ImageView
                 android:id="@+id/imgvGoal"
                 app:layout_constraintBottom_toBottomOf="@+id/txvCategorySteps"
                 app:layout_constraintLeft_toRightOf="@+id/txvCategorySteps"
@@ -261,7 +259,7 @@
                 android:layout_height="20dp"
                 android:layout_marginEnd="@dimen/category_margin_half"
                 android:layout_marginRight="@dimen/category_margin_half"
-                android:src="@drawable/ic_trophy"/>
+                android:src="@drawable/ic_trophy"/>-->
 
             <TextView
                 android:id="@+id/txvStepNumber"
@@ -271,19 +269,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/category_margin_half"
                 android:fontFamily="sans-serif-light"
-                android:text="2450"
+                android:text="6h 43 min"
                 android:textColor="@color/transparentOrange"
                 android:textSize="18sp"/>
 
             <TextView
-                app:layout_constraintBaseline_toBaselineOf="@+id/txvStepNumber"
-                app:layout_constraintLeft_toRightOf="@+id/txvStepNumber"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvStepNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/category_title_margin"
                 android:layout_marginStart="@dimen/category_title_margin"
                 android:fontFamily="sans-serif-light"
-                android:text="steps so far today"
+                android:text="asleep last night"
                 android:textColor="@color/transparentMainText"
                 android:textSize="@dimen/category_text_details_s"
                 android:textStyle="italic"/>
@@ -291,10 +289,10 @@
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutMusic"
+            android:id="@+id/layoutHeartRate"
             app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
             app:layout_constraintRight_toLeftOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/layoutLocations"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBP"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginEnd="@dimen/category_margin_half"
@@ -331,27 +329,26 @@
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoryMusic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/category_margin"
-                android:layout_marginStart="@dimen/category_margin"
+                android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-light"
-                android:text="19"
+                android:text="74 BPM"
                 android:textColor="@color/transparentYellow"
-                android:textSize="30sp"/>
+                android:textSize="18sp"/>
 
             <TextView
                 android:id="@+id/txvListenTime"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txvCategoryMusic"
+                app:layout_constraintTop_toBottomOf="@+id/txvSongNumber"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="1h15m"
-                android:textColor="@color/transparentYellow"
-                android:textSize="30sp"/>
 
-            <TextView
+                android:fontFamily="sans-serif-light"
+                android:text="updated at 10:20 AM"
+                android:textColor="@color/transparentMainText"
+                android:textStyle="italic"/>
+
+            <!--<TextView
                 android:id="@+id/txvSongDetail"
                 app:layout_constraintLeft_toLeftOf="@+id/txvSongNumber"
                 app:layout_constraintRight_toRightOf="@+id/txvSongNumber"
@@ -375,17 +372,17 @@
                 android:text="listening"
                 android:textColor="@color/transparentMainText"
                 android:textSize="@dimen/category_text_details_s"
-                android:textStyle="italic"/>
+                android:textStyle="italic"/>-->
 
 
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutAppUsage"
-            app:layout_constraintBottom_toBottomOf="@+id/layoutMusic"
+            android:id="@+id/layoutProtein"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutHeartRate"
             app:layout_constraintLeft_toLeftOf="@+id/guideline"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/layoutMusic"
+            app:layout_constraintTop_toTopOf="@+id/layoutHeartRate"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginEnd="@dimen/category_margin"
@@ -417,7 +414,7 @@
                 android:textSize="@dimen/category_title_size"
                 android:textStyle="bold"/>
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/imgvPhoneUsage"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/txvUsageDetail"
@@ -425,113 +422,41 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/ic_usage"/>
+                android:src="@drawable/ic_usage"/>-->
 
             <TextView
                 android:id="@+id/txvUsageDetail"
-                app:layout_constraintLeft_toRightOf="@+id/imgvPhoneUsage"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/txvCategoryUsage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/category_margin_half"
                 android:fontFamily="sans-serif-light"
-                android:text="Today used phone for"
-                android:textColor="@color/transparentMainText"
-                android:textSize="@dimen/category_text_details_s"
+                android:text="47 grams"
+                android:textColor="@color/transparentCyan"
+                android:textSize="18sp"
                 android:textStyle="italic"/>
 
             <TextView
                 android:id="@+id/txvUsageTime"
-                app:layout_constraintLeft_toLeftOf="@+id/txvUsageDetail"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txvUsageDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:text="3h20m"
-                android:textColor="@color/transparentCyan"
-                android:textSize="18sp"/>
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutInternetData"
-            app:layout_constraintLeft_toLeftOf="@+id/layoutWeather"
-            app:layout_constraintRight_toLeftOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/layoutMusic"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="@dimen/category_margin_half"
-            android:layout_marginRight="@dimen/category_margin_half"
-            android:layout_marginTop="@dimen/category_margin"
-            android:background="@drawable/bg_ripple_purple"
-            android:elevation="@dimen/elevation_main_category"
-           >
-
-            <TextView
-                android:id="@+id/txvCategoryData"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/category_title_margin"
-                android:layout_marginStart="@dimen/category_title_margin"
-                android:layout_marginTop="@dimen/category_title_margin"
-                android:background="@color/transparentPurple"
-                android:elevation="@dimen/elevation_main_category"
-                android:gravity="center"
-                android:paddingBottom="@dimen/category_title_padding_half"
-                android:paddingLeft="@dimen/category_title_padding"
-                android:paddingRight="@dimen/category_title_padding"
-                android:paddingTop="@dimen/category_title_padding_half"
-                android:text="Data"
-                android:textColor="@color/transparent"
-                android:textSize="@dimen/category_title_size"
-                android:textStyle="bold"/>
-
-            <ImageView
-                android:id="@+id/imgvPieChart"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/txvDataUsed"
-                app:layout_constraintTop_toBottomOf="@+id/txvCategoryData"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/ic_pie"/>
-
-            <TextView
-                android:id="@+id/txvDataUsed"
-                app:layout_constraintLeft_toRightOf="@+id/imgvPieChart"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txvCategoryData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/category_margin_half"
-                android:fontFamily="sans-serif-light"
-                android:text="1590MB/2GB"
-                android:textColor="@color/transparentPurple"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/txvDataDetail"
-                app:layout_constraintBottom_toBottomOf="@+id/imgvPieChart"
-                app:layout_constraintLeft_toLeftOf="@+id/txvDataUsed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:text="data used this month"
+                android:text="today"
                 android:textColor="@color/transparentMainText"
-                android:textSize="@dimen/category_text_details_s"
-                android:textStyle="italic"/>
-
+                />
 
         </android.support.constraint.ConstraintLayout>
+
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutArrow"
-            app:layout_constraintLeft_toLeftOf="@+id/layoutLocations"
-            app:layout_constraintRight_toRightOf="@+id/layoutLocations"
-            app:layout_constraintTop_toBottomOf="@+id/layoutInternetData"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutBP"
+            app:layout_constraintRight_toRightOf="@+id/layoutBP"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeartRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone">
@@ -576,7 +501,7 @@
         <FrameLayout
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutInternetData"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHeartRate"
             android:layout_width="0dp"
             android:layout_height="8dp"
             android:layout_marginTop="@dimen/category_margin_half"></FrameLayout>

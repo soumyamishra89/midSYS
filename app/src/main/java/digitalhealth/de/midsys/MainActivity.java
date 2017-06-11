@@ -17,7 +17,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-import digitalhealth.de.midsys.fragment.FragmentForum2;
+import digitalhealth.de.midsys.fragment.FragmentForum;
 import digitalhealth.de.midsys.fragment.FragmentHealth;
 import digitalhealth.de.midsys.fragment.FragmentTutorial;
 
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.drawer_forum:
                     Log.i(TAG, "FORUM");
-                    Fragment fragment2 = Fragment.instantiate(MainActivity.this, FragmentForum2.class.getName());
+                    Fragment fragment2 = Fragment.instantiate(MainActivity.this, FragmentForum.class.getName());
                     fragmentTransaction.replace(R.id.fragmentmain, fragment2);
                     fragmentTransaction.commit();
                     break;

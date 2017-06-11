@@ -27,7 +27,7 @@ import digitalhealth.de.midsys.adapter.ChatMessageAdapter;
  * Created by Soumya Mishra on 11/06/17.
  */
 
-public class FragmentForum2 extends Fragment {
+public class FragmentForum extends Fragment {
 
     private RecyclerView mRecyclerView;
     private Button mButtonSend;
@@ -41,7 +41,7 @@ public class FragmentForum2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
 
-        View root = inflater.inflate(R.layout.fragment_forum2, container, false);
+        View root = inflater.inflate(R.layout.fragment_forum, container, false);
 
         mRecyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
         mButtonSend = (Button) root.findViewById(R.id.btn_send);
@@ -78,6 +78,7 @@ public class FragmentForum2 extends Fragment {
     private void sendMessage(String message) {
         ChatMessage chatMessage = new ChatMessage(message, true, false);
         mAdapter.add(chatMessage);
+
 
         Handler handler= new Handler();
         handler.postDelayed(new Runnable() {

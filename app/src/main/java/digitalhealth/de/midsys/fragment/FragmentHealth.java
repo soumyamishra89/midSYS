@@ -49,28 +49,26 @@ public class FragmentHealth extends Fragment implements View.OnClickListener {
         View root = inflater.inflate(R.layout.fragment_health, container, false);
 
         //Populate colorMap
-        colorMap.put(R.id.layoutLocations, R.color.transparentRed);
-        colorMap.put(R.id.layoutSteps, R.color.transparentOrange);
-        colorMap.put(R.id.layoutMusic, R.color.transparentYellow);
-        colorMap.put(R.id.layoutAppUsage, R.color.transparentCyan);
-        colorMap.put(R.id.layoutInternetData, R.color.transparentPurple);
+        colorMap.put(R.id.layoutBP, R.color.transparentRed);
+        colorMap.put(R.id.layoutSleep, R.color.transparentOrange);
+        colorMap.put(R.id.layoutHeartRate, R.color.transparentYellow);
+        colorMap.put(R.id.layoutProtein, R.color.transparentCyan);
+
 
         // Populate viewMap
-        viewMap.put(R.id.layoutLocations, R.id.layoutMusic);
-        viewMap.put(R.id.layoutSteps, R.id.layoutMusic);
-        viewMap.put(R.id.layoutMusic, R.id.layoutInternetData);
-        viewMap.put(R.id.layoutAppUsage, R.id.layoutInternetData);
-
+        viewMap.put(R.id.layoutBP, R.id.layoutHeartRate);
+        viewMap.put(R.id.layoutSleep, R.id.layoutHeartRate);
+        /*viewMap.put(R.id.layoutHeartRate, R.id.layoutInternetData);
+        viewMap.put(R.id.layoutHeartRate, R.id.layoutInternetData);
+*/
         //Populate fragmentMap
-        fragmentMap.put(R.id.layoutLocations, FragmentHealthDetails.class.getName());
-        fragmentMap.put(R.id.layoutSteps, FragmentHealthDetails.class.getName());
-        fragmentMap.put(R.id.layoutAppUsage, FragmentHealthDetails.class.getName());
-        fragmentMap.put(R.id.layoutInternetData, FragmentHealthDetails.class.getName());
-        fragmentMap.put(R.id.layoutMusic, FragmentHealthDetails.class.getName());
+        fragmentMap.put(R.id.layoutBP, FragmentBP.class.getName());
+        fragmentMap.put(R.id.layoutSleep, FragmentSleep.class.getName());
+        fragmentMap.put(R.id.layoutHeartRate, FragmentHeartRate.class.getName());
 
-        layoutLocation = (ConstraintLayout) root.findViewById(R.id.layoutLocations);
+        layoutLocation = (ConstraintLayout) root.findViewById(R.id.layoutBP);
 
-        layoutStep = (ConstraintLayout) root.findViewById(R.id.layoutSteps);
+        layoutStep = (ConstraintLayout) root.findViewById(R.id.layoutSleep);
 
         layoutDropdown = (ConstraintLayout) root.findViewById(R.id.layoutFragmentMain);
         layoutFragmentContainer = (FrameLayout) root.findViewById(R.id.layoutFrameFragment);
@@ -80,11 +78,11 @@ public class FragmentHealth extends Fragment implements View.OnClickListener {
         layoutMain = (ConstraintLayout) root.findViewById(R.id.layoutMain);
 
         root.findViewById(R.id.layoutWeather).setOnClickListener(this);
-        root.findViewById(R.id.layoutLocations).setOnClickListener(this);
-        root.findViewById(R.id.layoutSteps).setOnClickListener(this);
-        root.findViewById(R.id.layoutMusic).setOnClickListener(this);
-        root.findViewById(R.id.layoutAppUsage).setOnClickListener(this);
-        root.findViewById(R.id.layoutInternetData).setOnClickListener(this);
+        root.findViewById(R.id.layoutBP).setOnClickListener(this);
+        root.findViewById(R.id.layoutSleep).setOnClickListener(this);
+        root.findViewById(R.id.layoutHeartRate).setOnClickListener(this);
+        root.findViewById(R.id.layoutProtein).setOnClickListener(this);
+
         constraintSet = new ConstraintSet();
         constraintSet.clone(layoutMain);
         return root;

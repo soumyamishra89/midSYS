@@ -11,6 +11,18 @@
             android:icon="@drawable/ic_health"
             android:title="@string/health"/>
     </group>
+
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_midwives"
+            android:checked="false"
+            android:icon="@drawable/ic_midwives"
+            android:title="@string/midwives"/>
+
+    </group>
+
     <group
         android:id="@+id/group2"
         android:checkableBehavior="single">
@@ -41,14 +53,5 @@
             android:title="@string/videos"/>
 
     </group>
-    <group
-        android:id="@+id/group5"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/drawer_midwives"
-            android:checked="false"
-            android:icon="@drawable/ic_midwives"
-            android:title="@string/midwives"/>
 
-    </group>
 </menu>

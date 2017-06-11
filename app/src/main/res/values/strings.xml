@@ -36,8 +36,7 @@
     <string name="confirmPassword">Confirm Password</string>
     <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
     <string name="already_user">Already have Account? Login here.</string>
-    <string name="personality">This is a personality test, it will help you understand why you act the way that you do and how your
-personality is structured</string>
+    <string name="personality">This is a personality test, it will help you to find the similar personality midwives</string>
 
     <string name="rate">1=disagree, 2=slightly disagree, 3=neutral, 4=slightly agree and 5=agree</string>
 

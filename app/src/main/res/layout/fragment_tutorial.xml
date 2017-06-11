@@ -38,12 +38,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:id="@+id/video"
                 android:orientation="horizontal">
 
                 <VideoView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
+
                     android:layout_weight=".5"/>
 
                 <VideoView
@@ -172,44 +174,6 @@
                     android:layout_weight=".5"/>
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <VideoView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight=".5"/>
-
-                <VideoView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight=".5"/>
-
-            </LinearLayout> <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
-
-            <VideoView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:layout_weight=".5"/>
-
-            <VideoView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:layout_weight=".5"/>
-
-        </LinearLayout>
-
 
         </LinearLayout>
     </ScrollView>
